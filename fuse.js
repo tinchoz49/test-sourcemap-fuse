@@ -13,7 +13,8 @@ const fuse = FuseBox.init({
   plugins,
   alias: {
     utils: '~/utils'
-  }
+  },
+  cache: false
 });
 
 fuse.bundle('app').instructions(`>index.js`);
