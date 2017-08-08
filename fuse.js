@@ -1,6 +1,3 @@
-const { lstatSync, readdirSync } = require('fs');
-const { join } = require('path');
-
 const { FuseBox, WebIndexPlugin, SourceMapPlainJsPlugin } = require('fuse-box');
 
 const plugins = [SourceMapPlainJsPlugin(), WebIndexPlugin()];
