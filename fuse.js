@@ -1,9 +1,9 @@
 const { lstatSync, readdirSync } = require('fs');
 const { join } = require('path');
 
-const { FuseBox, WebIndexPlugin } = require('fuse-box');
+const { FuseBox, WebIndexPlugin, SourceMapPlainJsPlugin } = require('fuse-box');
 
-const plugins = [WebIndexPlugin()];
+const plugins = [SourceMapPlainJsPlugin(), WebIndexPlugin()];
 
 const fuse = FuseBox.init({
   homeDir: 'src',
